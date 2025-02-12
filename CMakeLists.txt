@@ -8,4 +8,9 @@ add_executable(C__Engine main.cpp
         Model.h
         tgaimage.cpp
         tgaimage.h
-        geometry.h)
+        geometry.h
+        Wireframe.cpp
+        Wireframe.h
+        Raster.cpp
+        Raster.h
+)
