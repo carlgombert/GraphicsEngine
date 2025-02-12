@@ -4,7 +4,7 @@ C++ 3D graphics engine with no external libraries.
 
 ### Motivation
 I wanted to gain a deeper understanding of how computer graphics engines like OpenGL work under the hood, both from a programming and mathematical perspective. 
-By building a 3D renderer in C++, I will hopefully be able to deeply understand fundamental graphics concepts such as rasterization, shading, and texture mapping.
+By building a 3D renderer in C++, I'll hopefully be able to deeply understand fundamental graphics concepts such as rasterization, shading, and texture mapping.
 
 ### Results
 1) 3D model loading and wireframe rendering (2/11/2025)
