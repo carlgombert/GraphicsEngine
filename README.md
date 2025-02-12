@@ -10,4 +10,5 @@ By building a 3D renderer in C++, I'll hopefully be able to deeply understand fu
 1) 3D model loading and wireframe rendering (2/11/2025)
 <p align="left">
 <img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/wireframe/head_wireframe.png" width="400" height="400"/>
+<img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/wireframe/face_wireframe.gif" width="400" height="400"/>
 </p>
