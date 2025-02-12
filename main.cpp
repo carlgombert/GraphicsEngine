@@ -42,13 +42,13 @@ TGAColor red   = TGAColor(255, 0,   0,   255);
 int main(int argc, char** argv) {
     int width = 5000;
     int height = 5000;
-    float scale = 1.0;
-    int yShift = -5000;
-    int xShift = -5000;
+    float scale = 2.0;
+    int yShift = 0;
+    int xShift = 0;
     int rotation = 0;
 
     TGAImage image(width, height, TGAImage::RGB);
-    Model model = Model("../res/input/mouse.obj");
+    Model model = Model("../res/input/head/head.obj");
     for (int i=0; i<model.nfaces(); i++) {
         std::vector<int> face = model.face(i);
         for (int j=0; j<3; j++) {
