@@ -25,15 +25,22 @@ Model::Model(const char *filename) : verts_(), faces_() {
             verts_.push_back(v);
         } else if (!line.compare(0, 2, "f ")) {
             std::vector<int> f;
-            int itrash, idx;
+            std::vector<int> ft;
+            int itrash, idx, tidx;
             iss >> trash;
             while (iss >> idx) { // Read only vertex index
                 idx--;
                 f.push_back(idx);
                 if (iss.peek() == '/') { // Check if texture/normal indices exist
                     iss.ignore();
-                    if (iss.peek() != ' ') { // Skip texture index if present
-                        iss >> itrash;
+                    if (iss.peek() != ' ') { // texture index if present
+                        if (iss.peek() != '/') {
+                            iss >> tidx;
+                            tidx--;
+                            ft.push_back(tidx);
+                        } else {
+                            iss >> itrash;
+                        }
                     }
                     if (iss.peek() == '/') { // Skip normal index if present
                         iss.ignore();
@@ -42,6 +49,13 @@ Model::Model(const char *filename) : verts_(), faces_() {
                 }
             }
             faces_.push_back(f);
+            face_textures_.push_back(ft);
+        } else if (!line.compare(0, 3, "vt ")) {
+            iss >> trash;
+            Vec3f t = Vec3f();
+            for (int i=0;i<3;i++) iss >> t.raw[i];
+
+            textures_.push_back(t);
         }
     }
     std::cerr << "# v# " << verts_.size() << " f# "  << faces_.size() << std::endl;
@@ -58,10 +72,22 @@ int Model::nfaces() {
     return (int)faces_.size();
 }
 
+int Model::ntextures() {
+    return (int)textures_.size();
+}
+
 std::vector<int> Model::face(int idx) {
     return faces_[idx];
 }
 
+std::vector<int> Model::face_texture(int idx) {
+    return face_textures_[idx];
+}
+
 Vec3f Model::vert(int i) {
     return verts_[i];
+}
+
+Vec3f Model::texture(int i) {
+    return textures_[i];
 }

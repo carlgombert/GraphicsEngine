@@ -14,15 +14,9 @@ By building a 3D renderer in C++, I'll hopefully be able to deeply understand fu
 </p>
 
 
-2) rasterized rendering (2/12/2025)
-<p align="left">
-<img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/rasterized/head_rasterized.png" width="400" height="400"/>
-<img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/rasterized/head_rasterized.gif" width="400" height="400"/>
-</p>
-
-
-2) added flat shading (2/12/2025)
+2) added rasterized rendering and flat shading (2/12/2025)
 <p align="left">
 <img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/flat_shading/head_flat_shading.png" width="400" height="400"/>
 <img src="https://github.com/carlgombert/GraphicsEngine/blob/main/result/flat_shading/head_flat_shading.gif" width="400" height="400"/>
 </p>
+

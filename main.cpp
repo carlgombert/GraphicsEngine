@@ -7,17 +7,17 @@
 int main(int argc, char** argv) {
     int width = 500;
     int height = 500;
-    float scale = 4.0;
+    float scale = 2;
     int yShift = 0;
     int xShift = 0;
     int rotation = 0;
-    float angle = 0;
+    float angle = 0.0;
 
     int count = 60;
 
 
     TGAImage image(width, height, TGAImage::RGB);
-    Model model = Model("../res/input/golang_gopher.obj");
+    Model model = Model("../res/input/head/head.obj");
     Vec3f light_dir(0,0,-1);
 
     Raster raster = Raster();

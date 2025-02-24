@@ -46,8 +46,7 @@ TGAImage & TGAImage::operator =(const TGAImage &img) {
 bool TGAImage::read_tga_file(const char *filename) {
 	if (data) delete [] data;
 	data = NULL;
-	std::ifstream in;
-	in.open (filename, std::ios::binary);
+	std::ifstream in(filename, std::ios::binary);
 	if (!in.is_open()) {
 		std::cerr << "can't open file " << filename << "\n";
 		in.close();
